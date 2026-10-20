@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>よくある質問(FAQ)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>よくある質問(FAQ)</h1>
+      <p class="lead">Bobに関するよくある質問と回答をまとめています。</p>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="検索と絞り込み">
+        <div class="search">
+          <label for="search-input" class="search-label">キーワードで検索</label>
+          <div class="search-box">
+            <input id="search-input" type="search" placeholder="キーワードを入力(例: MCP、コマンド)" autocomplete="off">
+            <button id="search-clear" type="button" class="search-clear" hidden>クリア</button>
+          </div>
+        </div>
+        <div id="category-tabs" class="tabs" role="group" aria-label="カテゴリで絞り込み"></div>
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+      </section>
+
+      <section id="faq-list" class="faq-list" aria-label="FAQ一覧"></section>
+
+      <p id="empty-state" class="empty-state" hidden>該当するFAQが見つかりませんでした。キーワードやカテゴリを変更してお試しください。</p>
+    </main>
+
+    <footer class="footer">
+      <p>この内容は qa.md に基づいています。</p>
+    </footer>
+  </div>
+
+  <script src="faq-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
